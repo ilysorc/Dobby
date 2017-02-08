@@ -1,2 +1,2 @@
 # Dobby
-IoC Container for .NET &amp; ASP.NET
+IoC Container for .NET &amp; ASP.NET Applications
