@@ -73,10 +73,12 @@ namespace Dobby
                 }
                 else
                 {
-                    lifetimeManager.Dispose();
                     _registeredTypes.Remove(dependencyModel);
 
                     dependencyModel.ResolvedType = DobbyInstanceService.GetInstance(dependencyModel.To);
+                    dependencyModel.LifetimeManagerKey = lifetimeManager.GetKey();
+
+                    lifetimeManager.Dispose();
 
                     _registeredTypes.Add(dependencyModel);
 

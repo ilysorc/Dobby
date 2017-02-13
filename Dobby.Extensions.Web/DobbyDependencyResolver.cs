@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Dobby.Extensions.Web.Mvc;
 
 namespace Dobby.Extensions.Web
 {
@@ -12,7 +11,6 @@ namespace Dobby.Extensions.Web
         public DobbyDependencyResolver()
         {
             _dobbyContainer = DobbyBootstrapper.GetContainer();
-            _dobbyContainer.AddModule(new DobbyMvcModule());
         }
 
         public object GetService(Type serviceType)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using DobbyMvcSample.Services;
 
 namespace DobbyMvcSample.Controllers
@@ -10,10 +6,12 @@ namespace DobbyMvcSample.Controllers
     public class HomeController : Controller
     {
         private readonly IMessageService _messageService;
+        private readonly IMessageService _messageService2;
 
-        public HomeController(IMessageService messageService)
+        public HomeController(IMessageService messageService, IMessageService messageService2)
         {
             _messageService = messageService;
+            _messageService = messageService2;
         }
 
         public ActionResult Index()

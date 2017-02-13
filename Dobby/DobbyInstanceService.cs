@@ -27,7 +27,7 @@ namespace Dobby
 
                 foreach (var parameter in parameters)
                 {
-                    args.Add(GetInstance(parameter.ParameterType));
+                    args.Add(DobbyBootstrapper.GetContainer().Resolve(parameter.ParameterType));
                 }
 
                 return constructorWithDependencyAttribute.Invoke(args.ToArray());
@@ -38,7 +38,7 @@ namespace Dobby
                 {
                     foreach (var parameter in constructor.GetParameters())
                     {
-                        args.Add(GetInstance(parameter.ParameterType));
+                        args.Add(DobbyBootstrapper.GetContainer().Resolve(parameter.ParameterType));
                     }
                     return constructor.Invoke(args.ToArray());
                 }

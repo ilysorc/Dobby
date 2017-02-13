@@ -2,6 +2,7 @@
 using System;
 using Dobby;
 using DobbyMvcSample.Services;
+using Dobby.Extensions.Web;
 
 namespace DobbyMvcSample
 {
@@ -9,7 +10,7 @@ namespace DobbyMvcSample
     {
         public void Execute(DobbyContainer dobbyContainer)
         {
-            dobbyContainer.Register<IMessageService, MailService>();
+            dobbyContainer.Register<IMessageService, MailService>(new PerRequestLifetimeManager());
         }
 
         public void Dispose()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dobby.Interfaces;
+using System;
 
 namespace Dobby.Models
 {

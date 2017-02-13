@@ -71,8 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DobbyDependencyResolver.cs" />
-    <Compile Include="Mvc\DobbyControllerActivator.cs" />
-    <Compile Include="Mvc\DobbyMvcModule.cs" />
+    <Compile Include="PerRequestLifetimeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
